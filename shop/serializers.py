@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from rest_framework import serializers
 
 from .models import Category, Item
@@ -5,7 +6,7 @@ from .models import Category, Item
 
 class ItemSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Category
+        model = Item
         fields = ('id', 'name', 'categories', 'value_int', 'value_float')
 
 
